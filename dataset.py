@@ -103,7 +103,7 @@ class RealIADDataset(torch.utils.data.Dataset):
         self.gt_transform = gt_transform
         self.phase = phase
 
-        json_path = os.path.join(root, 'realiad_jsons', 'realiad_jsons', category + '.json')
+        json_path = os.path.join(root, 'realiad_jsons', category + '.json')
         with open(json_path) as file:
             class_json = file.read()
         class_json = json.loads(class_json)
