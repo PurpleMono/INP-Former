@@ -98,7 +98,7 @@ class MVTecDataset(torch.utils.data.Dataset):
 
 class RealIADDataset(torch.utils.data.Dataset):
     def __init__(self, root, category, transform, gt_transform, phase):
-        self.img_path = os.path.join(root, 'realiad_1024', category)
+        self.img_path = os.path.join(root, category)
         self.transform = transform
         self.gt_transform = gt_transform
         self.phase = phase
