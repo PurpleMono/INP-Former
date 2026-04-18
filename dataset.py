@@ -112,10 +112,10 @@ class RealIADDataset(torch.utils.data.Dataset):
 
         data_set = class_json[phase]
         for sample in data_set:
-            self.img_paths.append(os.path.join(root, 'realiad_1024', category, sample['image_path']))
+            self.img_paths.append(os.path.join(root, category, sample['image_path']))
             label = sample['anomaly_class'] != 'OK'
             if label:
-                self.gt_paths.append(os.path.join(root, 'realiad_1024', category, sample['mask_path']))
+                self.gt_paths.append(os.path.join(root, category, sample['mask_path']))
             else:
                 self.gt_paths.append(None)
             self.labels.append(label)
